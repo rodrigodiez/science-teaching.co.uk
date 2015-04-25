@@ -21,7 +21,7 @@
 //Navigation For Index2
   $('#navs').onePageNav({
     currentClass: 'active',
-    filter: ':not(.external)', 
+    filter: ':not(.external)',
     scrollThreshold: 0.25,
     scrollOffset: 0
   });
@@ -42,21 +42,21 @@
               }
       });
       return false;
-  });  
+  });
 
 
 //Responsive Nav
   $('.nav a.colapse-menu1').click(function () { $(".navbar-collapse").collapse("hide") });
-  $('body').on('touchstart.dropdown', '.dropdown-menu', function (e) { e.stopPropagation(); }); 
+  $('body').on('touchstart.dropdown', '.dropdown-menu', function (e) { e.stopPropagation(); });
 
 //Smoothscroll
       smoothScroll.init({
-          speed: 200 
-      }); 
+          speed: 200
+      });
 
  /*----------------------------- Scroll To Top--------------------------*/
              var scrollTimeout;
-            
+
             $('a.scroll-top').click(function(){
                 $('html,body').animate({scrollTop:0},500);
                 return false;
@@ -68,23 +68,23 @@
                     scrollTimeout = setTimeout(function(){$('a.scroll-top:hidden').fadeIn()},100);
                 }
                 else{
-                    scrollTimeout = setTimeout(function(){$('a.scroll-top:visible').fadeOut()},100);    
+                    scrollTimeout = setTimeout(function(){$('a.scroll-top:visible').fadeOut()},100);
             }
             });
 
 /*----------------------------- Tweetscroll--------------------------*/
-  $('.tweets-list-container').tweetscroll({ 
-    username: 'envatowebdesign', 
+  $('.tweets-list-container').tweetscroll({
+    username: 'rodrigodiez_pro',
     speed : 100,
-    delay: 5000,    
+    delay: 5000,
     time: false,
     replies: false,
     limit: 5,
-    position: 'append', 
-    date_format: 'style2', 
-    animation: 'slide_up', 
+    position: 'append',
+    date_format: 'style2',
+    animation: 'slide_up',
     request_url: 'js/tweetscroll/twitter/tweets.php',
-    visible_tweets: 1 
+    visible_tweets: 1
   });
 
 /*----------------------------- Tooltip--------------------------*/
@@ -136,10 +136,10 @@
 
 /*----------------------------- Google Map --------------------------*/
   $('#gmap').gmap3({
-    marker:{address:"Haltern am See, Weseler Str. 151", options:{icon: "img/location1.png"}},
+    marker:{address:"Greenwich, London, UK", options:{icon: "img/location1.png"}},
     map:{
         options:{
-        zoom: 14,
+        zoom: 13,
         scrollwheel: false
                 }
         }
@@ -149,11 +149,11 @@
      $('#submit').formValidator({
         scope: '#form'
       });
-      
+
       $('#post-commentsss').formValidator({
         scope: '#comments-form'
       });
-      
+
       $('#submit,#post-commentsss').click(function() {
             $('input.error-input, textarea.error-input').delay(300).animate({marginLeft:0},100).animate({marginLeft:10},100).animate({marginLeft:0},100).animate({marginLeft:10},100);
         });
@@ -178,21 +178,21 @@
           });
         }
       };
-      
+
 
       $('#form').submit(function() {
         $(this).ajaxSubmit(options);
         return false;
-      });   
+      });
 
    });
 
     $(window).load(function(){
-/*----------------------------- Loader & Parallax --------------------------*/    
-//Page Preloader  
+/*----------------------------- Loader & Parallax --------------------------*/
+//Page Preloader
       $(".loader-item").delay(700).fadeOut();
-      $(".mask").delay(800).fadeOut("slow");    
-        parallaxInit(); 
+      $(".mask").delay(800).fadeOut("slow");
+        parallaxInit();
 
 /*----------------------------- Isotop Portfolio --------------------------*/
     $(function(){
@@ -201,7 +201,7 @@
                     itemSelector : '.mt',
                     layoutMode : 'masonry'
                   });
-        
+
         var $optionSets = $('#options .option-set'),
             $optionLinks = $optionSets.find('a');
 
@@ -214,7 +214,7 @@
           var $optionSet = $this.parents('.option-set');
           $optionSet.find('.selected').removeClass('selected');
           $this.addClass('selected');
-    
+
           // make option object dynamically, i.e. { filter: '.my-filter-class' }
           var options = {},
               key = $optionSet.attr('data-option-key'),
@@ -229,25 +229,25 @@
             // otherwise, apply new options
             $container.isotope( options );
           }
-          
+
           return false;
         });
-      });  
+      });
 //Masonry Blog
     var $container = $('.blog-post-holder');
     $container.isotope({
-       masonry: { 
+       masonry: {
       },
       animationOptions: {
         duration: 750,
         easing: 'linear',
         queue: false,
-      },  
+      },
     });
 
     });
 
-//Parallax     
+//Parallax
   function parallaxInit() {
     $('#home').parallax("30%", 0.1);
     $('#status').parallax("30%", 0.1);
@@ -257,6 +257,6 @@
     //$('#parallax-1').parallax("30%", 0.1);
     //$('#parallax-2').parallax("30%", 0.1);
     /*add as necessary*/
-  }  
+  }
 
 })(jQuery);

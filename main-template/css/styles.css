@@ -57,7 +57,7 @@ Table of Contents End
 
 /* 1 - Imported Stylesheets
 ------------------------------------------------------------------------*/
-@import url(metrofontpack.css);
+/*@import url(metrofontpack.css);*/
 
 
 /* 2 - General Styles
@@ -67,7 +67,7 @@ html{
     overflow-x: hidden;
 }
 body {
-    font-family: 'Raleway', Helvetica, Arial, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
     font-size: 16px;
     color: #7e878f;
     background-color: #FFFFFF;
@@ -83,7 +83,7 @@ br.clear { margin: 0px; padding: 0px; }
 hr{margin: 10px 0;}
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Raleway', Helvetica, Arial, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
     padding-bottom: 5px;
     color: #373432;
     line-height: 1em;
@@ -160,11 +160,11 @@ blockquote p {
 
 .scroll-top {
     background: none repeat scroll 0 0 #222222;
-    border-radius: 6px;
-    -moz-border-radius: 6px;
-    -webkit-border-radius: 6px;
-    -o-border-radius: 6px;
-    -ms-border-radius: 6px;
+    border-radius: 250px;
+    -moz-border-radius: 250px;
+    -webkit-border-radius: 250px;
+    -o-border-radius: 250px;
+    -ms-border-radius: 250px;
     bottom: 30px;
     color: #ffffff;
     display: none;
@@ -208,9 +208,8 @@ a.mt-button {
     display:inline-block;
 }
 a.hire-btn{
-    background-color: #e74c3c;
     color: #FFFFFF;
-    font-family: 'Raleway', Helvetica, Arial, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
     font-size: 14px;
     font-weight: bold;
     padding: 17px 52px;
@@ -468,7 +467,7 @@ a.hire-btn:hover{
     line-height: 62px;
     font-weight: bold;
     text-transform: uppercase;
-    font-family: 'Raleway', Helvetica, Arial, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
 }
 #open-nav.nav-full:before{
     float: right;
