@@ -115,9 +115,9 @@ dd  { margin-left: 1.5em;}
 blockquote  { margin: 1.5em; padding: 1em; color: #666666; background: #e6e6e6; font-style: italic; border: 1px solid #dcdcdc; }
     blockquote p { padding-bottom: 0px; }
 
-input[type=text],input.text, input.title, textarea, select { background-color:#FFFFFF; border:1px solid #bbb; padding: 2px; color: #4e4e4e; }
-input[type=text]:focus, input.text:focus, input.title:focus, textarea:focus, select:focus { border-color:#2D3940; color: #3e3e3e; }
-input[type=text], input.text, input.title, textarea, select { margin:0.5em 0; }
+input[type=text],input[type=email],input.text,input.title, textarea, select { background-color:#FFFFFF; border:1px solid #bbb; padding: 2px; color: #4e4e4e; }
+input[type=text]:focus,input[type=email]:focus,input.text:focus, input.title:focus, textarea:focus, select:focus { border-color:#2D3940; color: #3e3e3e; }
+input[type=text], input[type=email], input.text, input.title, textarea, select { margin:0.5em 0; }
 textarea { padding: 4px; }
 
 .clearfix:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
@@ -840,7 +840,7 @@ a.hire-btn:hover{
 .home-overlay {
     background:repeat scroll 0 0 rgba(53,60,79,.8);
     height: 100%;
-    min-height: 653px;
+    min-height: 765px;
     position: relative;
 }
 
@@ -942,9 +942,18 @@ a.hire-btn:hover{
     height: 134px;
     border-radius: 50%;
     background-color: #f1f1f1;
-}
-.about-extra-icon ul li p{
     color: #7e868e;
+    -webkit-transition: color 0.3s, background-color 0.3s;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.about-extra-icon ul li:hover {
+
+    background-color: #4ABCDD;
+    color: #FFFFFF;
+}
+
+.about-extra-icon ul li p{
     font-size: 16px;
     text-align: center;
     padding-top: 35px;
@@ -1884,7 +1893,7 @@ a.hire-btn:hover{
     display: inline-block;
     padding-left: 10px;
 }
-.form input[type="text"], textarea {
+.form input[type="text"], input[type="email"], textarea {
     color: #999999;
     font-size: 14px;
     text-transform:uppercase;
@@ -1920,17 +1929,10 @@ a.hire-btn:hover{
     padding: 22px;
 }
 
-.sending{
+.sending, .sent, .sentError{
   display:none;
-  color:#222222;
-  font-size:20px;
-  line-height:20px;
-  text-align: center;
 }
-.mess.center {
-    color: #222222;
-    text-align: center;
-}
+
 .gmap{
     height: 500px;
     margin-top: 50px;
@@ -1979,6 +1981,11 @@ a.hire-btn:hover{
     font-size: 18px;
     text-align: center;
 }
+.tweet-list li a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
 /* 18.2 - Footer Widgets
 ------------------------------------------------------------------------*/
 .footer-widgets{
@@ -2240,17 +2247,11 @@ a.hire-btn:hover{
     border-color: #f54f36 !important;
 }
 .loader-item {
-    background: none repeat scroll 0 0 #ffffff;
-    border-bottom: 3px solid rgba(0, 0, 0, 0) !important;
-    border-left: 3px solid;
-    border-radius: 200px;
-    border-right: 3px solid;
-    border-top: 3px solid;
-    height: 40px;
-    left: 50%;
+    height: 92px;
+    left: 48%;
     margin: -20px 0 0 -20px;
     position: absolute;
     text-align: center;
     top: 50%;
-    width: 40px;
+    width: 92px;
 }

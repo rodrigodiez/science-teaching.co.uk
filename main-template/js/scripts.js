@@ -74,7 +74,7 @@
 
 /*----------------------------- Tweetscroll--------------------------*/
   $('.tweets-list-container').tweetscroll({
-    username: 'rodrigodiez_pro',
+    username: 'laura_cascos',
     speed : 100,
     delay: 5000,
     time: false,
@@ -83,7 +83,7 @@
     position: 'append',
     date_format: 'style2',
     animation: 'slide_up',
-    request_url: 'js/tweetscroll/twitter/tweets.php',
+    request_url: 'tweets',
     visible_tweets: 1
   });
 
@@ -163,19 +163,30 @@
       var options = {
 
         beforeSubmit: function() {
-          $('.sending').show();
 
+            $('#form').hide();
+            $('.sending').show();
+            smoothScroll.animateScroll( null, '#sendMe' );
         },
         success: function() {
+
           $('.sending').hide();
-          $('#form').hide();
-          $(".mess").append('<h5>Thanks !</h5><h5>Your message has been sent.</h5>'); // Change Your message post send
-          $('.mess').delay(3000).fadeOut(function() {
+          $(".sent").show();
+          $('.sent').delay(5000).fadeOut(function() {
 
             $('#form').clearForm();
-            $('#form').delay(3500).show();
-
+            $('#form').delay(5500).show();
           });
+        },
+        error: function() {
+
+            $('.sending').hide();
+            $(".sentError").show();
+            $('.sentError').delay(5000).fadeOut(function() {
+
+              $('#form').clearForm();
+              $('#form').delay(5500).show();
+            });
         }
       };
 
