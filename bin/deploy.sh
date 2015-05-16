@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-rsync -rltDvz --delete -e "ssh" main-template/* darwin.rodrigodiez.io:/var/www/www.science-teaching.co.uk/laura-cascos
+rsync -rltDvz --delete -e "ssh" dist/ darwin.rodrigodiez.io:/var/www/laura-cascos.co.uk/
