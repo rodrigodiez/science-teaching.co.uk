@@ -136,7 +136,7 @@
 
 /*----------------------------- Google Map --------------------------*/
   $('#gmap').gmap3({
-    marker:{address:"Greenwich, London, UK", options:{icon: "img/location1.png"}},
+    marker:{address:"Finsbury park, London, UK", options:{icon: "img/location1.png"}},
     map:{
         options:{
         zoom: 13,
