@@ -10,7 +10,8 @@ RUN grunt build
 
 RUN mkdir -p /usr/share/nginx/html
 RUN cp -R dist/* /usr/share/nginx/html
-RUN mv /usr/share/nginx/html/index-laura.html /usr/share/nginx/html/cv.html
+RUN mkdir /usr/share/nginx/html/cv
+RUN mv /usr/share/nginx/html/index-laura.html /usr/share/nginx/html/cv/index.html
 RUN mv /usr/share/nginx/html/index-science.html /usr/share/nginx/html/index.html
 
 VOLUME /usr/share/nginx/html
